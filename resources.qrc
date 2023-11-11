@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/CONNECT LOGO.png</file>
+    <file>icons/ERROR CHECK ICON.png</file>
+    <file>icons/EXIT LOGO.png</file>
+    <file>icons/IMPORT DB ICON.png</file>
+    <file>icons/MAIN MIDDLE LOGO.png</file>
+    <file>icons/READ ICON.png</file>
+    <file>icons/SAVE DB ICON.png</file>
+  </qresource>
+</RCC>
