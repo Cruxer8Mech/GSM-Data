@@ -1,0 +1,1 @@
+pyinstaller -Fw --onefile --name "ATM GSM Data Receiver" --icon "icon.ico" .\main.py

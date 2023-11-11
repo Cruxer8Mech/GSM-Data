@@ -4,7 +4,7 @@ from PyQt5.QtGui import QIcon
 from ui_main import Ui_MainWindow
 import ctypes
 
-myappid = 'tahiralauddin.gsm.1.0.0' # arbitrary string
+myappid = 'tahiralauddin.gsm-data-receiver.1.0.0' # arbitrary string
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 
@@ -21,7 +21,7 @@ class Main(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.setWindowIcon(QIcon("logo.png"))
+        self.setWindowIcon(QIcon("logo.jpg"))
 
         self.Ui_components()
 
