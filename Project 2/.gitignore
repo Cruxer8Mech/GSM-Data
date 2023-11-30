@@ -1,0 +1,17 @@
+__pycache__
+
+gsm.png
+
+# pyinstaller
+build
+dist
+*.spec
+
+# Advanced installer
+*.aip
+*SetupFiles
+
+# Cache
+*cache
+
+Pipfile.lock

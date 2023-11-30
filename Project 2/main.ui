@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>871</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GSM Bank Software</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-color: black;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+background-color: black;
+}
+
+/* Scan Button Styling */
+#scanBtn {
+  background-color: #FF9500; /* A bright orange for high visibility and action-inducement */
+  color: red; /* Black text for high contrast on the orange button */
+  font-family: 'Roboto', sans-serif; /* A modern, friendly sans-serif font */
+  font-size: 15px;
+  font-weight: bold; /* Bold text to signify importance */
+  padding: 10px; /* Generous padding to make the button touch-friendly */
+  border: none; /* No border for a modern, flat design */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+}
+
+#scanBtn:hover {
+  background-color: #E87C00; /* A slightly darker shade of orange for the hover state */
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background: tranpsarent;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="invisibleBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>65</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>CLICK ME</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 87 16pt &quot;Montserrat Black&quot;;
+color: #E8E8E8; /* A light grey color for subtlety against the black background */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font choice */
+font-weight: bold; /* Make the title bold */
+text-align: center; /* Center-align the title */
+ border-bottom: 2px solid #4CAF50; /* A green border for emphasis and to tie in with button color */
+  
+
+</string>
+         </property>
+         <property name="text">
+          <string>GSM RS232 BANK SOFTWARE V1.2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,5,1">
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+background: rgb(85, 85, 255);
+font: 8pt &quot;Open Sans&quot;;
+font-size: 15px;
+padding: 5px 3px;
+border: 1px solid lightgrey;
+color: lightgrey
+}
+
+
+
+/* Style the buttons with a pop of color */
+QPushButton {
+  background-color: #4CAF50; /* A shade of green for visibility and contrast */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+QPushButton:hover {
+  background-color: #45a049; /* A slightly darker green for hover effect */
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="portBtn">
+            <property name="text">
+             <string>PORT</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="settingsBtn">
+            <property name="text">
+             <string>Settings</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="supportedBtn">
+            <property name="text">
+             <string>Supported 
+ATMS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="downloadPacketsBtn">
+            <property name="text">
+             <string>Download 
+Packets</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fileLocationBtn">
+            <property name="text">
+             <string>File Location</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exitBtn">
+            <property name="text">
+             <string>Exit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disconnectAllBtn">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 170, 127)</string>
+            </property>
+            <property name="text">
+             <string>Disconnect 
+All</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="mainContent">
+         <property name="styleSheet">
+          <string notr="true">/* Main Content Area Styling */
+#mainContent {
+  background-color: #1C1C1C; /* Dark grey which is softer than pure black */
+  color: #E8E8E8; /* Light grey text for readability */
+  padding: 20px; /* Spacing inside the content area */
+  border-radius: 8px; /* Softly rounded corners */
+  margin: 20px; /* Space around the content area */
+  }
+
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QFrame" name="borderFrame">
+            <property name="styleSheet">
+             <string notr="true">#borderFrame {
+border-radius: 15px;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QFrame" name="blackFrame">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,5,1">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QFrame" name="frame_8">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="label_2">
+                     <property name="styleSheet">
+                      <string notr="true">color: lightgrey;
+font: 87 10pt &quot;Montserrat Black&quot;;
+</string>
+                     </property>
+                     <property name="text">
+                      <string>SCAN GSM PACKETS IN RADIUS</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="scanBtn">
+                     <property name="maximumSize">
+                      <size>
+                       <width>90</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+/* Scan Button Styling */
+#scanBtn {
+  background-color: #FF9500; /* A bright orange for high visibility and action-inducement */
+  color: red; /* Black text for high contrast on the orange button */
+  font-family: 'Roboto', sans-serif; /* A modern, friendly sans-serif font */
+  font-size: 15px;
+  font-weight: bold; /* Bold text to signify importance */
+  padding: 10px; /* Generous padding to make the button touch-friendly */
+  border: none; /* No border for a modern, flat design */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+}
+
+#scanBtn:hover {
+  background-color: #E87C00; /* A slightly darker shade of orange for the hover state */
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>SCAN</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/atm.png</normaloff>images/atm.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>25</width>
+                       <height>25</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_9">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_7">
+                   <item>
+                    <widget class="QFrame" name="frame_4">
+                     <property name="styleSheet">
+                      <string notr="true">QLabel {
+color: lightgrey;
+font-family: 'Roboto', sans-serif; /* A modern, friendly sans-serif font */
+font-size: 15px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_6">
+                      <item>
+                       <widget class="QLabel" name="label_5">
+                        <property name="text">
+                         <string>Network Connection</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_7">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>Status:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="statusLabel">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">color: red;</string>
+                        </property>
+                        <property name="text">
+                         <string>Not Connected</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_6">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_7">
+                      <item>
+                       <widget class="QLabel" name="signalTowerLabel">
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+color: lightgrey;
+font-family: 'Roboto', sans-serif; /* A modern, friendly sans-serif font */
+font-size: 15px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Signal Strength to Tower</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: green;</string>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_4">
+                     <property name="styleSheet">
+                      <string notr="true">color: lightgrey;
+font: 75 10pt &quot;Roboto Black&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>CONNECTED ATMS</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_3">
+                     <property name="styleSheet">
+                      <string notr="true">color: lightgrey;
+font: 10pt &quot;MS Sans Serif&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>ATM(s) STATUS CONNECTIVITY</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_7">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_5"/>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_10">
+                  <property name="styleSheet">
+                   <string notr="true">QProgressBar {
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #4CAF50;
+    width: 20px; /* size of the chunks */
+    margin: 0.5px;
+}
+
+QPushButton {
+    background-color: #4CAF50;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <item>
+                    <widget class="QPushButton" name="startBtn">
+                     <property name="styleSheet">
+                      <string notr="true">
+/* Scan Button Styling */
+#startBtn {
+  background-color: #FF9500; /* A bright orange for high visibility and action-inducement */
+  font-family: 'Roboto', sans-serif; /* A modern, friendly sans-serif font */
+  font-size: 15px;
+  font-weight: bold; /* Bold text to signify importance */
+  padding: 10px 20px; /* Generous padding to make the button touch-friendly */
+  border: none; /* No border for a modern, flat design */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+}
+
+#startBtn:hover {
+  background-color: #E87C00; /* A slightly darker shade of orange for the hover state */
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Start</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QProgressBar" name="progressBar">
+                     <property name="value">
+                      <number>24</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_5">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+background: rgb(85, 85, 205);
+font: 8pt &quot;Open Sans&quot;;
+font-size: 15px;
+padding: 5px 3px;
+border: 1px solid lightgrey;
+color: white;
+}
+
+
+/* Style the buttons with a pop of color */
+QPushButton {
+  background-color: #4CAF50; /* A shade of green for visibility and contrast */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+QPushButton:hover {
+  background-color: #45a049; /* A slightly darker green for hover effect */
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QPushButton" name="connectPCToGSMBtn">
+            <property name="text">
+             <string>Connect 
+PC to GSM</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="connectGSMToATMBtn">
+            <property name="text">
+             <string>Connect 
+GSM to ATM</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="connectToTowerBtn">
+            <property name="text">
+             <string>Connect 
+Both to Tower</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
