@@ -46,10 +46,7 @@ QCheckBox::indicator {
 }
 </string>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <property name="spacing">
-     <number>0</number>
-    </property>
+   <layout class="QGridLayout" name="gridLayout">
     <property name="leftMargin">
      <number>0</number>
     </property>
@@ -62,7 +59,7 @@ QCheckBox::indicator {
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <item>
+    <item row="0" column="0">
      <widget class="QFrame" name="frame">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -70,8 +67,8 @@ QCheckBox::indicator {
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
         <widget class="QFrame" name="frame_3">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -123,7 +120,7 @@ QCheckBox::indicator {
          </layout>
         </widget>
        </item>
-       <item>
+       <item row="0" column="1">
         <widget class="QFrame" name="frame_2">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -143,6 +140,13 @@ QCheckBox::indicator {
            <widget class="QLineEdit" name="lineEdit"/>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QPushButton" name="saveFileLocationBtn">
+         <property name="text">
+          <string>Save</string>
+         </property>
         </widget>
        </item>
       </layout>

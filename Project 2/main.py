@@ -1,3 +1,4 @@
+from html.parser import HTMLParser
 import sys
 from PyQt5.QtWidgets import QMainWindow, QSizePolicy,\
                         QMessageBox, QPushButton, \
@@ -53,6 +54,8 @@ class Main(QMainWindow):
         self.scannableSignal.connect(self.readyForScan)
 
         # Default values
+        self.fileLocation = r'C:\Users\MyPC\Documents\GSM Software\Recieved'
+        self.infoPlainText = ''
         self.connectedToGSM = False
         self.connectedToATM = False
         self.connectedToTower = False
@@ -84,10 +87,14 @@ class Main(QMainWindow):
         self.ui.progressBar.setValue(0)
     
     def openFileLocation(self):
-        self.showPopup(message=r"File Location C:\Users\MyPC\Documents\GSM Software")
+        self.showPopup(message=fr"File Location {self.fileLocation}")
 
     def openDownloadPackets(self):
-        self.showPopup(message=r"Saved to C:\Users\MyPC\Documents\GSM Software\Recieved")
+        try:
+            open(f'{self.fileLocation}/file.log', 'w').write(self.infoPlainText)
+        except Exception as e:
+            self.showPopup(message=str(e))
+        self.showPopup(message=fr"Saved to {self.fileLocation}")
     
     def readyForScan(self):
         self.scannable = True
@@ -208,8 +215,12 @@ class Main(QMainWindow):
     def saveATM(self, name):
         self.atmName = name
 
-    def saveInfo(self, info):
-        self.info = info
+    def saveInfo(self, text_edit):
+        self.info = text_edit.toHtml()
+        # x = HTMLParser().feed(self.info)
+        self.infoPlainText = text_edit.toPlainText()
+        print(str(self.infoPlainText))
+        
 
     def connectToGSM(self):
         self.restartProgressBar(callback=self.GSMSignal)
@@ -273,7 +284,7 @@ class InvisibleWindow(QMainWindow):
 
     def Ui_components(self):
         self.ui.saveATMBtn.clicked.connect(lambda: self.parent.saveATM(self.ui.textEdit.toPlainText()))
-        self.ui.saveInfoBtn.clicked.connect(lambda: self.parent.saveInfo(self.ui.textEdit_2.toHtml()))
+        self.ui.saveInfoBtn.clicked.connect(lambda: self.parent.saveInfo(self.ui.textEdit_2))
 
       
 class PortWindow(QMainWindow):
@@ -318,7 +329,12 @@ class SettingsWindow(QMainWindow):
         self.Ui_components()
 
     def Ui_components(self):
-        pass
+        self.ui.saveFileLocationBtn.clicked.connect(self.setFileLocation)
+
+    def setFileLocation(self):
+        self.parent.fileLocation = self.ui.lineEdit.text()
+        self.close()
+
 
 
 if __name__ == "__main__":
